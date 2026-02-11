@@ -1,0 +1,11 @@
+new entry "Dinorville"
+type "Character"
+using "Dilophosaurus"
+data "Dexterity" "12"
+data "Constitution" "6"
+data "Intelligence" "14"
+data "Wisdom" "16"
+data "Charisma" "7"
+data "Armor" "11"
+data "Vitality" "22"
+

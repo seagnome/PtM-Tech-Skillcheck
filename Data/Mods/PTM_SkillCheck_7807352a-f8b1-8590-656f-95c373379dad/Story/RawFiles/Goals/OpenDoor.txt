@@ -1,0 +1,23 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION Door
+IF
+UseFinished(_Player,PTM_SkillCheck_secretbutton_000_487b95c6-2776-496f-9065-e4e83b616587, 1)
+AND
+IsLocked(DOOR_Doubles_000_91e2f5fa-0be3-4f95-b23b-61c68a4965cb, 1)
+THEN
+PROC_ItemUnlockAndOpen(DOOR_Doubles_000_91e2f5fa-0be3-4f95-b23b-61c68a4965cb);
+
+IF
+UseFinished(_Player,PTM_SkillCheck_secretbutton_000_487b95c6-2776-496f-9065-e4e83b616587, 1)
+AND
+IsOpened(DOOR_Doubles_000_91e2f5fa-0be3-4f95-b23b-61c68a4965cb, 1)
+THEN
+PROC_ItemCloseAndLock(DOOR_Doubles_000_91e2f5fa-0be3-4f95-b23b-61c68a4965cb, "PTM_SkillCheck_TavernKey");
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

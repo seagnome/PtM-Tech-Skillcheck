@@ -1,0 +1,15 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+//DialogEnded(Dinorville_760a4f29-5a6e-4e6c-81ec-f9625dd6999e,1)
+DialogEnded((DIALOGRESOURCE)dino1_0c8e73ea-6cfa-60ac-7d0b-73f6862fe54a,_)
+AND
+GetFlag((FLAG)PTM_dooropen_3ee0c11d-6a77-cd09-c6af-80c2a4ab2273,760a4f29-5a6e-4e6c-81ec-f9625dd6999e,1)
+THEN
+PROC_ItemUnlockAndOpen(DOOR_Doubles_000_91e2f5fa-0be3-4f95-b23b-61c68a4965cb); 
+EXITSECTION
+
+ENDEXITSECTION

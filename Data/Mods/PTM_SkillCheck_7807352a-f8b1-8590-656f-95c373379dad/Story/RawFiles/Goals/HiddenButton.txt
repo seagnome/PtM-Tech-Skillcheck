@@ -1,0 +1,19 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+EnteredTrigger(_Player,(TRIGGER)PTM_SkillCheck_Button_Trigger_b9159f05-8db4-4a8c-a232-fb04861b1532) //Checks if player has entered trigger
+AND
+DB_Players(_Player) //Important declares the person in trigger is a player not an NPC (must come after the Entered trigger for some reason)
+THEN
+RequestPassiveRoll(_Player,PTM_SkillCheck_secretbutton_000_487b95c6-2776-496f-9065-e4e83b616587 ,"Passive","Perception",(DIFFICULTYCLASS)HiddenPerception_Trivial_7d16b9fd-d3c3-4693-9d50-ae44b962b4c4,0, "PTM_SkillCheck_hb");
+
+PROC
+PROC_RollResult("PTM_SkillCheck_hb", _Player, PTM_SkillCheck_secretbutton_000_487b95c6-2776-496f-9065-e4e83b616587, 1)
+THEN
+SetCanInteract(PTM_SkillCheck_secretbutton_000_487b95c6-2776-496f-9065-e4e83b616587,1); //sets the object to be interactable
+EXITSECTION
+
+ENDEXITSECTION
